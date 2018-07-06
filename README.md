@@ -7,7 +7,7 @@ Running JPetStore sample under Tomcat (using the cargo-maven2-plugin).
 
 Clone this repository
 
-$ git clone https://github.com/Khalilurswi/jpetstore6.git
+$ git clone https://github.com/Khalilurswi/java_maven_selenium_jpetstore6.git
 
 Build war file
 
