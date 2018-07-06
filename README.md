@@ -11,7 +11,7 @@ $ git clone https://github.com/Khalilurswi/java_maven_selenium_jpetstore6.git
 
 Build war file
 
-$ cd jpetstore6
+$ cd java_maven_selenium_jpetstore6
 
 $ ./mvnw clean package
 
