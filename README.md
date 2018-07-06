@@ -19,5 +19,5 @@ Running the JPetStore on 9090 port
 
 JDK 8+
 
-$ ./mvnw test -P itest
+
 
