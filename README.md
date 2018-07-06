@@ -1,29 +1,72 @@
-# README #
+# java_maven_selenium_jpetstore6
+test demo
+Run on Application Server
+Running JPetStore sample under Tomcat (using the cargo-maven2-plugin).
 
-This README would normally document whatever steps are necessary to get your application up and running.
+1.0 Download HSQLDB http://hsqldb.org/ 
 
-### What is this repository for? ###
+Clone this repository
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+$ git clone https://github.com/Khalilurswi/jpetstore6.git
 
-### How do I get set up? ###
+Build war file
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+$ cd jpetstore6
 
-### Contribution guidelines ###
+$ ./mvnw clean package
 
-* Writing tests
-* Code review
-* Other guidelines
+Startup the Tomcat server and deploy web application
 
-### Who do I talk to? ###
+$ ./mvnw cargo:run -P tomcat90
 
-* Repo owner or admin
-* Other community or team contact
+Note:
+
+We provide maven profiles per application server as follow:
+
+Profile	Description
+
+
+tomcat90	Running under the Tomcat 9.0
+
+tomcat85	Running under the Tomcat 8.5
+
+tomcat80	Running under the Tomcat 8.0
+
+tomcat70	Running under the Tomcat 7.0
+
+tomee	Running under the TomEE 7
+
+wildfly12	Running under the WildFly 12
+
+wildfly11	Running under the WildFly 11
+
+liberty18	Running under the WebSphere Liberty 18
+
+liberty17	Running under the WebSphere Liberty 17
+
+jetty	Running under the Jetty 9
+
+glassfish5	Running under the GlassFish 5
+
+glassfish4	Running under the GlassFish 4
+
+resin	Running under the Resin 4
+
+Run application in browser http://localhost:9090/jpetstore/
+
+Press Ctrl-C to stop the server.
+
+Try integration tests
+
+Perform integration tests for screen transition.
+
+Requires:
+
+HSQLDB
+
+Running the JPetStore on 9090 port
+
+JDK 8+
+
+$ ./mvnw test -P itest
+
